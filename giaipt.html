@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PS21848 - ASM - Giải phương trình</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="giaipt.js">
+    </script>
+</head>
+
+<body onload="">
+    <div class="container">
+        <h3>Giải Phương trình bậc 2 : ax <sup>2</sup> + bx + c = 0 </h3>
+        <p style="color:blueviolet; font-weight:bold;">Số lần giải: <span id="i"></span> </p>
+        <hr>
+        <form>
+            <p><label style="font-weight:bold">Nhập số a: </label> <input type="text" id="a" onclick="mokhoa();"> </p>
+            <p><label style="font-weight:bold">Nhập số b: </label> <input type="text" id="b" onclick="mokhoa();"> </p>
+            <p><label style="font-weight:bold">Nhập số c: </label> <input type="text" id="c" onclick="mokhoa();"> </p>
+            <button type="button" class="nutkhoa" disabled id="giai" onclick="giaipt();reset();">Giải PT</button>
+            <button type="button" class="nut" id="sonn" onclick="choso();">Cho Số</button>
+        </form>
+        <div id="kq"></div>
+        <div class="dongho">
+            <i>Bây giờ là:</i>
+            <span id="tg">
+                <script>
+                    dongho = setInterval(time, 1000);
+                </script>
+            </span>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

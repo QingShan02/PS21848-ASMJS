@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS21848 - ASM - Đăng kí</title>
+    <style>
+        #form {
+            width: 450px;
+            margin: 10px auto;
+            padding: 10px 40px;
+            background: whitesmoke;
+            border: 1px solid black;
+            color: rgb(4, 45, 80);
+
+        }
+
+        em {
+            color: red;
+        }
+
+        h2 {
+            margin-left: 120px;
+            color: rgb(21, 73, 119);
+        }
+
+        #form .txt {
+            width: 450px;
+            padding: 6px;
+            border: 1px solid lightslategray;
+        }
+
+        #form #fieldset {
+            border: 1px solid lightslategray;
+        }
+
+        #form #dangki {
+            width: 100px;
+            height: 40px;
+            border: none;
+            background-color: royalblue;
+            color: white;
+            border-radius: 10px;
+            margin-left: 170px;
+        }
+
+        #form #dangki:hover {
+            background-color: red;
+            color: white;
+        }
+
+        #baoloi {
+            color: red;
+            margin-left: 145px;
+            font-weight: bold;
+
+        }
+
+        body {
+            background-image: url(./anh/hinh-nen-powerpoint-dep-nhat-5.jpg);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .boxcenter {
+            width: 1180px;
+            margin: 0 auto;
+        }
+
+        .row {
+            float: left;
+            width: 100%;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .menu {
+            background-color: rgb(161, 42, 42);
+            color: #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .menu ul {
+            padding: 0px 10px;
+        }
+
+        .menu ul li {
+            list-style-type: none;
+            display: inline;
+            padding: 0px 15px;
+        }
+
+        .menu ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .menu ul li a:hover {
+            color: white;
+            font-size: 0.8vw;
+        }
+    </style>
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+<body>
+    <div class="boxcenter">
+        <div class="row mb menu">
+            <ul>
+                <li><a href="./sv-cart/index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+                <li><a href="dangki.html">Đăng kí</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <form id="form" name="frm" ng-app="myapp" ng-controller="myCtrl">\
+            <h2>Đăng kí Thành Viên</h2>
+        <p>
+            <label> Mã Sinh Viên</label> <br>
+            <input type="text" class="txt" ng-model="mssv" required minlength="0" maxlength="7" name="ms">
+            <em ng-hide="frm.ms.$valid">Vui lòng nhập mã sinh viên</em>
+        </p>
+        <p>
+            <label> Họ và tên</label> <br>
+            <input type="text" class="txt" ng-model="name" required name="hoten">
+            <em ng-hide="frm.hoten.$valid">Vui lòng nhập họ và tên</em>
+        </p>
+        <p>
+            <label>Email</label> <br>
+            <input type="email" class="txt" name="Email" ng-model="email" required>
+            <em ng-hide="frm.Email.$valid">Vui lòng nhập email</em>
+        </p>
+        <p>
+        <fieldset id="fs1">
+            <legend>Giới Tính</legend>
+            <input type="radio" name="gioitinh" value="Nam" ng-model="gioitinh"> <label>Nam</label>
+            <input type="radio" name="gioitinh" value="Nữ" ng-model="gioitinh"> <label>Nữ</label>
+            <br><em ng-hide="gioitinh == 'Nam' ||gioitinh == 'Nữ'">
+                <hr>Vui lòng chọn giới tính
+            </em>
+        </fieldset>
+        </p>
+        <p>
+        <fieldset id="fs1">
+            <legend>Sở thích</legend>
+            <input type="checkbox" name="st" ng-model="sothich"> <label>Đọc sách</label>
+            <input type="checkbox" name="st" ng-model="sothich2"> <label>Du lịch</label>
+            <input type="checkbox" name="st" ng-model="sothich3"> <label>Ẩm thực</label>
+            <input type="checkbox" name="st" ng-model="sothich4"> <label>Âm nhạc</label>
+            <input type="checkbox" name="st" ng-model="sothich5"> <label>Khác</label>
+            <br><em ng-hide="sothich== true ||sothich2== true || sothich3== true || sothich4== true||sothich5== true">
+                <hr>Vui lòng chọn sở thích
+            </em>
+        </fieldset>
+        </p>
+        <p>
+            <label>Quốc tịch</label>
+            <select id="quoctich" class="txt" ng-model="qt">
+                <option value="0">Chọn quốc tịch</option>
+                <option value="1">Việt Nam</option>
+                <option value="2">Mỹ</option>
+                <option value="3">Nga</option>
+            </select>
+            <br><em ng-hide=" qt == 1 || qt ==2 || qt ==3">Vui lòng chọn Quốc tịch</em>
+        </p>
+        <p>
+            <label>Ghi chú</label> <br>
+            <textarea id="ghichu" cols="54" rows="5" class="txt" name="gc" ng-model="note" required
+                ng-minlength="50"></textarea>
+            <em ng-hide="frm.gc.$valid">Hãy điền ít nhất 50 kí tự!</em>
+        </p>
+        <div id="baoloi" ng-show="frm.$valid">Bạn đã điền đúng form</div>
+        <hr>
+        <button type="submit" id="dangki">Đăng kí</button>
+    </form>
+</div>
+</body>
+
+</html>
+<script>
+    var app = angular.module('myapp', []);
+    app.controller('myCtrl', xuly);
+    function xuly($scope) {
+
+    }
+</script>

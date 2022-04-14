@@ -1,0 +1,88 @@
+body {
+  background-image: url(./anh/hinh-nen-powerpoint-dep-nhat-5.jpg);
+}
+.container {
+  background-color: rgb(145, 17, 17);
+  max-width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  margin-left: 450px;
+  margin-top: 60px;
+}
+#kq {
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px white;
+  padding: 50px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  max-width: 65%;
+  max-height: 20%;
+  height: 10%;
+}
+
+.dongho {
+  height: 50px;
+  color: yellow;
+}
+#i {
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: 16px;
+}
+#giai {
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#sonn {
+  padding: 5px 20px 5px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+#a {
+  font-weight: bold;
+  text-align: center;
+}
+#a:focus {
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(63, 223, 63);
+}
+
+#b {
+  font-weight: bold;
+  text-align: center;
+}
+#b:focus {
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(63, 223, 63);
+}
+#c {
+  font-weight: bold;
+  text-align: center;
+}
+#c:focus {
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(63, 223, 63);
+}
+.nutkhoa {
+  color: white;
+  background-color: rgb(138, 121, 116);
+}
+.nut {
+  color: white;
+  background-color: lightseagreen;
+}
+h3 {
+  padding-top: 10px;
+  color: antiquewhite;
+}
